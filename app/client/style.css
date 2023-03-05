@@ -1,28 +1,64 @@
-/* Use Open Sans as the default sans serif font. */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Source+Code+Pro:300,400,500,700");
-
-/* Set up some CSS variables to theme the application. */
-:root {
-  --matr-navbar-bg: #ECECEC;
-  --matr-navbar-bg-rgb: 236, 236, 236;
-}
-
-/* Change bootstrap variable values.
- See https://getbootstrap.com/docs/5.2/customize/css-variables/
- */
 body {
-  --bs-light-rgb: var(--matr-navbar-bg-rgb);
+  --bs-black-rgb: 29, 28, 28;
+  --bs-dark-rgb: 40, 40, 40;
+  --bs-light-rgb: 51, 51, 51;
+  --bs-primary-rgb: 112, 142, 247;
 }
-
-/* Set the alert background on the signin and signup pages. */
-#signin-page .alert-light, #signup-page .alert-light {
-  --bs-alert-bg: var(--matr-navbar-bg);
+.sideMenu {
+  height: 100vh!important;
+  position: fixed!important;
+  top: 0;
+  right: 0;
+  z-index: 1000;
 }
-
-/* Define custom styles */
-.gray-background {
-  background-color: var(--matr-navbar-bg);
-  color: var(--bs-dark);
-  padding-top: 10px;
-  padding-bottom: 20px;
+.sideMenuClose {
+  position: absolute;
+  right: 0;
+}
+.sideMenuTitles {
+  font-size: 10px;
+  color: rgb(170, 170, 170);
+  width: 190px;
+  display: inline-block;
+}
+.sideMenuLists {
+  background-color: transparent;
+  font-size: 14px;
+  width: 190px;
+  display: inline-block;
+}
+.form-control[type="text"]::placeholder, .search {
+  color: rgb(170, 170, 170)!important;
+}
+.search:hover, .dropdown-item:hover {
+  background-color: rgb(70, 70, 70)!important;
+}
+.checkMark, .cardLinks, .learnMore {
+  color: rgb(112, 142, 247);
+}
+.greenBG {
+  background-color: rgb(82, 181, 145);
+  margin-top: -230px!important;
+}
+.greenBG h1 {
+  margin-top: 230px;
+}
+.addChromeBlack {
+  background-color: rgba(0, 0, 0, 0.6)!important;
+}
+.accordion, .accordion-button {
+  --bs-btn-border-color: transparent;
+  --bs-accordion-border-color: rgb(29, 28, 28);
+  --bs-accordion-btn-bg: rgb(29, 28, 28);
+  --bs-accordion-active-bg: rgb(29, 28, 28);
+  --bs-accordion-active-color: white;
+  --bs-accordion-btn-icon: none;
+  --bs-accordion-btn-active-icon: none;
+}
+.form-control[type="text"], .accordion-button:focus {
+  outline: none!important;
+  box-shadow: none!important;
+}
+.dropdown-toggle::after {
+  display: none!important;
 }
